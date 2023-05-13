@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Injector} from '@angular/core';
 import {BaseComponent} from "../../base.component";
 
 @Component({
@@ -10,6 +10,14 @@ export class LoginComponent extends BaseComponent {
 
   override loadOnline() {
     super.loadOnline();
+  }
+
+  public constructor(injector:Injector) {
+    super(injector)
+  }
+
+  override ngOnInit() {
+    super.ngOnInit();
   }
 
 }
