@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HeaderInterceptor} from "../network/header/header.interceptor";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +21,10 @@ import {MatMenuModule} from '@angular/material/menu';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+
   ],
   providers: [
     {
@@ -29,4 +34,5 @@ import {MatMenuModule} from '@angular/material/menu';
     }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
