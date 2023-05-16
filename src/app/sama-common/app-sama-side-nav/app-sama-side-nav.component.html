@@ -1,0 +1,23 @@
+<mat-sidenav-container class="bg-white text-dark row justify-content-start h-100 p-0 m-0">
+  <mat-sidenav #sidenav [opened]="isShowing" class="h-100 p-0 m-0 col-md-4">
+    <div class="bg-secondary p-0 m-0" style="height: 100% ;width: 100%">
+      <div class="row justify-content-center align-items-center  p-0 m-0">
+        <div class="row justify-content-center col-10">
+          farhang
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="row justify-content-end  h-100 p-0 m-0 ">
+
+    <div class="d-flex bg-secondary justify-content-start p-0 m-0" style="height:100%">
+      <div style="height: 100%;width: :100%">
+        <p>
+          <button (click)="toggleSidenav()" color="primary" mat-button>Toggle</button>
+        </p>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

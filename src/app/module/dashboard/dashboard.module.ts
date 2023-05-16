@@ -8,20 +8,24 @@ import {AppSamaNavbarComponent} from "../../sama-common/app-sama-navbar/app-sama
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {AppSamaSideNavComponent} from "../../sama-common/app-sama-side-nav/app-sama-side-nav.component";
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
-    AppSamaNavbarComponent
+    AppSamaNavbarComponent,
+    AppSamaSideNavComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule
   ]
 })
 export class DashboardModule { }

@@ -1,26 +1,41 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container-fluid px-0 mx-0">
-  <nav class="navbar navbar-dark bg-secondary  px-0 mx-0" style="min-height:40px;direction: rtl">
-    <div class=" row d-flex justify-content-between w-100">
-      <div class=" col-3 d-flex justify-content-around">
-        <div class="d-flex justify-content-center align-items-center">
-          <a href="#"><img src="../../../assets/icon/menu-small.png"></a>
+  <nav class="navbar navbar-dark bg-secondary row justify-content-between  px-0 mx-0"
+       style="min-height:40px;direction: rtl">
+    <div class="col-sm-6 col-md-8 col-lg-4  col-12">
+      <div class="row p-0 m-0">
+        <div class="col-sm-2 col-md-2 col-lg-2 col-2 d-flex align-content-center align-items-center">
+          <a (click)="onSideNavClick()">
+            <mat-icon>menu</mat-icon>
+          </a>
         </div>
-        <div class="d-flex align-content-center align-items-center justify-content-center">
-          <a class="navbar-brand ps-2 text-dark" href="#">سیستم جامع پایش سلامت دانشجو</a>
-        </div>
-      </div>
-      <div class=" d-flex justify-content-around align-items-center col-1">
-        <div class="d-flex justify-content-center ">
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>خروج</button>
-          </mat-menu>
-          <button [matMenuTriggerFor]="menu" aria-label="Example icon button with a vertical  icon" color="black"
-                  mat-button>
-            <img src="assets/icon/power-off.png">
-          </button>
+        <div
+          class="col-sm-6 col-md-3 col-lg-6 col-9 navbar-brand d-flex justify-content-center align-items-center align-content-center">
+          <h2 class="p-0 m-0 text-dark ">سیستم پایش سلامت دانشجو</h2>
         </div>
       </div>
     </div>
-
+    <div class="col-4  d-none d-sm-flex justify-content-end">
+      <div class="row justify-content-around p-0 m-0">
+        <div class="col-sm-6 col-md-4 d-flex align-items-center">
+          <button [matMenuTriggerFor]="menu" aria-label="Example icon-button  with a menu" class="pb-1" color="basic"
+                  mat-button>
+            <mat-icon>sms</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>priority_high</mat-icon>
+              <span>Redial</span>
+            </button>
+          </mat-menu>
+        </div>
+        <div class="col-md-6 col-6 d-flex justify-content-center">
+          <mat-icon class="pt-1">
+            power_settings_new
+          </mat-icon>
+        </div>
+      </div>
+    </div>
   </nav>
 </div>
+
