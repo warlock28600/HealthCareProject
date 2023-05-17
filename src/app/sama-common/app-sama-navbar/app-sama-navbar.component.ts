@@ -16,4 +16,8 @@ export class AppSamaNavbarComponent {
   onSideNavClick() {
     this.sideNavEvent = true
   }
+
+  onGoToHome() {
+
+  }
 }

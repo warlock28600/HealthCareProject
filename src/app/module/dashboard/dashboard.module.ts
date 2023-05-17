@@ -10,6 +10,8 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {AppSamaSideNavComponent} from "../../sama-common/app-sama-side-nav/app-sama-side-nav.component";
+import {UsersComponent} from './users/users.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import {AppSamaSideNavComponent} from "../../sama-common/app-sama-side-nav/app-s
     DashboardComponent,
     HomeComponent,
     AppSamaNavbarComponent,
-    AppSamaSideNavComponent
+    AppSamaSideNavComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import {AppSamaSideNavComponent} from "../../sama-common/app-sama-side-nav/app-s
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ]
 })
 export class DashboardModule { }

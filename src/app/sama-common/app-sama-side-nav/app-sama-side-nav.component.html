@@ -1,5 +1,6 @@
 <mat-sidenav-container class="bg-white text-dark row justify-content-start h-100 p-0 m-0">
-  <mat-sidenav #sidenav [opened]="isShowing" class="h-100 p-0 m-0 col-md-4">
+  <mat-sidenav #sidenav [opened]="isShowing" class="bg-white p-0 m-0 col-md-3" mode="over" position="end"
+               style="height: 100%;direction: rtl">
     <div class="bg-secondary p-0 m-0" style="height: 100% ;width: 100%">
       <div class="row  justify-content-end align-items-center p-0 m-0">
         <div class="d-flex justify-content-end align-items-center pt-2 col-3">
@@ -8,18 +9,85 @@
           </a>
         </div>
       </div>
+      <div class="row px-0 mx-0">
+        <div class=" px-0 mx-0 border border-2 border-dark rounded-1 d-flex justify-content-center">
+          <mat-card class="bg-secondary border-1 p-0 mx-0 example-card">
+            <mat-card-header class="p-0 m-0">
+              <div class="example-header-image" mat-card-avatar></div>
+              <mat-card-title>دانشگاه بهشتی</mat-card-title>
+            </mat-card-header>
+            <div class="row px-0 mx-0 justify-content-center">
+              <img alt="Photo of a Shiba Inu" mat-card-image
+                   src="https://material.angular.io/assets/img/examples/shiba2.jpg" style="width: 150px;height: 150px">
+            </div>
+            <mat-card-content>
+              <div class="row px-0 pt-2 justify-content-center">
+                <div class="border border-dark border-2 rounded-1 d-flex justify-content-center">
+                  <label>
+                    تاریخ : 1400/12/12
+                  </label>
+                </div>
+              </div>
+              <div class="row px-0 pt-2 justify-content-center">
+                <div class="border border-2 border-dark rounded-1 d-flex justify-content-center">
+                  <label>نام کاربر : فرهنگ ایرانی</label>
+                </div>
+              </div>
+              <div class="row px-0 pt-2 justify-content-center">
+                <div class="border border-2 border-dark rounded-1 d-flex justify-content-center">
+                  <label>ساعت : 10:09:00</label>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row bg-secondary px-0 pt-2 m-0">
+        <button [matMenuTriggerFor]="security" class="d-flex justify-content-between flex-row-reverse" colo mat-button>
+          امنیت سیستم
+          <mat-icon style="direction: rtl">arrow_left</mat-icon>
+        </button>
+        <mat-menu #security="matMenu" style="margin-left: 1000px" xPosition="after" yPosition="below">
+          <button mat-menu-item>لیست گروه های کاربری</button>
+          <button mat-menu-item>تعریف گروه کاربری جدید</button>
+          <button mat-menu-item>لیست کاربران</button>
+        </mat-menu>
+      </div>
+      <div class="row bg-secondary px-0 pt-2 m-0">
+        <button [matMenuTriggerFor]="Management" class="d-flex justify-content-between flex-row-reverse" colo
+                mat-button>مدیر سیستم
+          <mat-icon style="direction: rtl">arrow_left</mat-icon>
+        </button>
+        <mat-menu #Management="matMenu" style="margin-left: 1000px" xPosition="after" yPosition="below">
+          <button mat-menu-item>تغییر کلمه عبور
+            <mat-icon>lock</mat-icon>
+          </button>
+          <button mat-menu-item>تغذیه اطلاعات</button>
+          <button mat-menu-item>مدیریت دسترسی ویرایش</button>
+          <button mat-menu-item>ویرایش محتوی صفحه ورود به سیستم</button>
+          <button mat-menu-item>ویرایش محتوی صفحه اصلی</button>
+          <button mat-menu-item>مدیریت لولیگ ها</button>
+        </mat-menu>
+      </div>
     </div>
   </mat-sidenav>
 
-  <mat-sidenav-content class="row justify-content-end  h-100 p-0 m-0 ">
+  <mat-sidenav-content class="row justify-content-end bg-white h-100 p-0 m-0 ">
+    <app-app-sama-navbar class="m-0 p-0"></app-app-sama-navbar>
+    <div class="d-flex  justify-content-end p-0 m-0" style="height:100%">
+      <div class="row">
 
-    <div class="d-flex bg-secondary justify-content-start p-0 m-0" style="height:100%">
-      <div style="height: 100%;width: :100%">
-        <p>
-          <button (click)="toggleSidenav()" color="primary" mat-button>Toggle</button>
-        </p>
+      </div>
+      <div class="row  p-0 m-0 col-2">
+        <button (click)="toggleSidenav()" class="bg-secondary" color="primary" mat-button>Toggle</button>
+      </div>
+      <div class="row col-10">
+        <router-outlet>
+
+        </router-outlet>
       </div>
     </div>
+
 
   </mat-sidenav-content>
 </mat-sidenav-container>
