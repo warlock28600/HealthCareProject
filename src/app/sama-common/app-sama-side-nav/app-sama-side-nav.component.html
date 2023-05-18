@@ -69,6 +69,52 @@
           <button mat-menu-item>مدیریت لولیگ ها</button>
         </mat-menu>
       </div>
+      <div class="row bg-secondary px-0 pt-2 m-0">
+        <button [matMenuTriggerFor]="Student" class="d-flex justify-content-between flex-row-reverse"
+                mat-button>دانشجو
+          <mat-icon style="direction: rtl">arrow_left</mat-icon>
+        </button>
+        <mat-menu #Student="matMenu" style="margin-left: 1000px" xPosition="after" yPosition="below">
+          <button mat-menu-item>تعهد نامه</button>
+          <button mat-menu-item>فرم اطلاعات عمومی</button>
+          <button mat-menu-item>قرم اطلاعات عمومی تکمیلی</button>
+          <button mat-menu-item>سابقه بیماری در خانواده</button>
+          <button mat-menu-item>سبک زندگی</button>
+          <button mat-menu-item>عادات غذایی</button>
+          <button mat-menu-item>سابقه بیماری</button>
+          <button mat-menu-item>دهان و دندان</button>
+        </mat-menu>
+      </div>
+      <div class="row bg-secondary px-0 pt-2 m-0">
+        <button [matMenuTriggerFor]="Doctor" class="d-flex justify-content-between flex-row-reverse"
+                mat-button>پزشک
+          <mat-icon style="direction: rtl">arrow_left</mat-icon>
+        </button>
+        <mat-menu #Doctor="matMenu" style="margin-left: 1000px" xPosition="after" yPosition="below">
+          <button mat-menu-item>معاینه فیزیکی</button>
+          <button mat-menu-item>اظهار نظر پزشک</button>
+          <button mat-menu-item>نتیجه و پیگیری</button>
+        </mat-menu>
+      </div>
+      <div class="row bg-secondary px-0 pt-2 m-0">
+        <button [matMenuTriggerFor]="Report" class="d-flex justify-content-between flex-row-reverse"
+                mat-button>گزارش ها
+          <mat-icon style="direction: rtl">arrow_left</mat-icon>
+        </button>
+        <mat-menu #Report="matMenu" style="margin-left: 1000px" xPosition="after" yPosition="below">
+          <button mat-menu-item>گزارش تجمعی داده</button>
+          <button mat-menu-item>گزارش نتیجه آزمایشات دانشجو</button>
+          <button mat-menu-item>گزارش تغییر اطلاعات و ویرایش فرم ها</button>
+          <button mat-menu-item>گزارش ورود به سیستم</button>
+          <button mat-menu-item>گزارش عملکرد دانشجویان</button>
+          <button mat-menu-item>گزارش لیست دانشجویان</button>
+          <button mat-menu-item>نتایج آزمایشات</button>
+          <button mat-menu-item>آمار کلی افراد بر اساس فرم های پر شدع</button>
+        </mat-menu>
+      </div>
+      <div class="row px-0 m-0">
+
+      </div>
     </div>
   </mat-sidenav>
 
