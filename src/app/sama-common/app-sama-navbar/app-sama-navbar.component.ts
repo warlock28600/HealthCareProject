@@ -1,4 +1,4 @@
-import {Component, Output} from '@angular/core'
+import {Component, EventEmitter, Output} from '@angular/core'
 
 
 @Component({
@@ -8,13 +8,19 @@ import {Component, Output} from '@angular/core'
 })
 export class AppSamaNavbarComponent {
 
-  @Output() sideNavEvent?: any
+  @Output() event = new EventEmitter<boolean>();
+  private sideNavEvent?: boolean;
 
   constructor() {
   }
 
   onSideNavClick() {
-    this.sideNavEvent = true
+    this.sideNavEvent = !this.sideNavEvent
+  }
+
+  emitValue() {
+    this.onSideNavClick()
+    this.event.emit(this.sideNavEvent)
   }
 
   onGoToHome() {

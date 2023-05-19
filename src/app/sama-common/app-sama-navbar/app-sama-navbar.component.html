@@ -1,17 +1,17 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container-fluid px-0 mx-0">
-  <nav class="navbar navbar-dark bg-secondary row justify-content-between  px-0 mx-0"
-       style="min-height:40px;direction: rtl">
+  <nav class="navbar navbar-dark  row justify-content-between  px-0 mx-0"
+       style="min-height:40px;direction: rtl;background-color: #595958">
     <div class="col-sm-6 col-md-8 col-lg-4  col-12">
       <div class="row p-0 m-0">
-        <div class="col-sm-2 col-md-2 col-lg-2 col-2 d-flex align-content-center align-items-center">
+        <div class="col-sm-2 col-md-2 col-lg-1 col-2 d-flex align-content-center align-items-center">
           <a (click)="onSideNavClick()">
-            <mat-icon>menu</mat-icon>
+            <mat-icon style="color: #bfbdbd">menu</mat-icon>
           </a>
         </div>
         <div
           class="col-sm-6 col-md-3 col-lg-6 col-9 navbar-brand d-flex justify-content-center align-items-center align-content-center">
-          <a (click)="onGoToHome()"><h2 class="p-0 m-0 text-dark ">سیستم پایش سلامت دانشجو</h2></a>
+          <a (click)="onGoToHome()"><h2 class="p-0 m-0 " style="color:#bfbdbd">سیستم پایش سلامت دانشجو</h2></a>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
         <div class="col-sm-6 col-md-4 d-flex align-items-center">
           <button [matMenuTriggerFor]="menu" aria-label="Example icon-button  with a menu" class="pb-1" color="basic"
                   mat-button>
-            <mat-icon>sms</mat-icon>
+            <mat-icon style="color:#bfbdbd">sms</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>
@@ -30,7 +30,7 @@
           </mat-menu>
         </div>
         <div class="col-md-6 col-6 d-flex justify-content-center">
-          <mat-icon class="pt-1">
+          <mat-icon class="pt-1" style="color:#bfbdbd">
             power_settings_new
           </mat-icon>
         </div>

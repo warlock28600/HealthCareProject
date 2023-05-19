@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-app-sama-side-nav',
@@ -8,8 +8,7 @@ import {Component, Input} from '@angular/core';
 export class AppSamaSideNavComponent {
   // private sidenav: MatSidenav
   isShowing?: boolean;
-  @Input() sideNavEvent?: any = undefined
-
+  sideNavButton?: boolean;
 
   constructor() {
 
@@ -21,7 +20,7 @@ export class AppSamaSideNavComponent {
   }
 
   ngOnInit() {
-    console.log(this.sideNavEvent)
+
   }
 
 
@@ -32,5 +31,6 @@ export class AppSamaSideNavComponent {
   //     this.sidenav.close()
   //   }
   // }
+
 
 }

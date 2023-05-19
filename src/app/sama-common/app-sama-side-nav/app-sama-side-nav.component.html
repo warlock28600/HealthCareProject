@@ -1,17 +1,17 @@
 <mat-sidenav-container class="bg-white text-dark row justify-content-start h-100 p-0 m-0">
-  <mat-sidenav #sidenav [opened]="isShowing" class="bg-white p-0 m-0 col-md-3" mode="over" position="end"
-               style="height: 100%;direction: rtl">
-    <div class="bg-secondary p-0 m-0" style="height: 100% ;width: 100%">
+  <mat-sidenav #sidenav [opened]="isShowing" class="p-0 m-0 col-md-3" mode="over" position="end"
+               style="height: 100%;direction: rtl;background-color:  #595958">
+    <div class="p-0 m-0" style="height: 100% ;width: 100%">
       <div class="row  justify-content-end align-items-center p-0 m-0">
         <div class="d-flex justify-content-end align-items-center pt-2 col-3">
-          <a (click)="toggleSidenav()">
+          <a>
             <mat-icon class="text-dark">close</mat-icon>
           </a>
         </div>
       </div>
       <div class="row px-0 mx-0">
         <div class=" px-0 mx-0 border border-2 border-dark rounded-1 d-flex justify-content-center">
-          <mat-card class="bg-secondary border-1 p-0 mx-0 example-card">
+          <mat-card class=" border-1 p-0 mx-0 example-card">
             <mat-card-header class="p-0 m-0">
               <div class="example-header-image" mat-card-avatar></div>
               <mat-card-title>دانشگاه بهشتی</mat-card-title>
@@ -42,7 +42,7 @@
           </mat-card>
         </div>
       </div>
-      <div class="row bg-secondary px-0 pt-2 m-0">
+      <div class="row  px-0 pt-2 m-0">
         <button [matMenuTriggerFor]="security" class="d-flex justify-content-between flex-row-reverse" colo mat-button>
           امنیت سیستم
           <mat-icon style="direction: rtl">arrow_left</mat-icon>
@@ -53,7 +53,7 @@
           <button mat-menu-item>لیست کاربران</button>
         </mat-menu>
       </div>
-      <div class="row bg-secondary px-0 pt-2 m-0">
+      <div class="row px-0 pt-2 m-0">
         <button [matMenuTriggerFor]="Management" class="d-flex justify-content-between flex-row-reverse" colo
                 mat-button>مدیر سیستم
           <mat-icon style="direction: rtl">arrow_left</mat-icon>
@@ -69,7 +69,7 @@
           <button mat-menu-item>مدیریت لولیگ ها</button>
         </mat-menu>
       </div>
-      <div class="row bg-secondary px-0 pt-2 m-0">
+      <div class="row px-0 pt-2 m-0">
         <button [matMenuTriggerFor]="Student" class="d-flex justify-content-between flex-row-reverse"
                 mat-button>دانشجو
           <mat-icon style="direction: rtl">arrow_left</mat-icon>
@@ -85,7 +85,7 @@
           <button mat-menu-item>دهان و دندان</button>
         </mat-menu>
       </div>
-      <div class="row bg-secondary px-0 pt-2 m-0">
+      <div class="row px-0 pt-2 m-0">
         <button [matMenuTriggerFor]="Doctor" class="d-flex justify-content-between flex-row-reverse"
                 mat-button>پزشک
           <mat-icon style="direction: rtl">arrow_left</mat-icon>
@@ -96,7 +96,7 @@
           <button mat-menu-item>نتیجه و پیگیری</button>
         </mat-menu>
       </div>
-      <div class="row bg-secondary px-0 pt-2 m-0">
+      <div class="row px-0 pt-2 m-0">
         <button [matMenuTriggerFor]="Report" class="d-flex justify-content-between flex-row-reverse"
                 mat-button>گزارش ها
           <mat-icon style="direction: rtl">arrow_left</mat-icon>
@@ -119,10 +119,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content class=" justify-content-end bg-white  p-0 m-0 ">
-    <app-app-sama-navbar class="m-0 p-0 "></app-app-sama-navbar>
+    <app-app-sama-navbar (sideNavEvent)="sideNavButton" class="m-0 p-0 "></app-app-sama-navbar>
     <!--      <div class="row">-->
     <div class="row  p-0 m-0 col-2">
-      <button (click)="toggleSidenav()" class="bg-secondary" color="primary" mat-button>Toggle</button>
+      <button class="bg-secondary" color="primary" mat-button>Toggle</button>
     </div>
     <div class=" w-100 p-0 m-0" style="height:94%">
       <router-outlet class="p-0 m-0">
