@@ -1,0 +1,15 @@
+<div class="p-0 persianDatePicker">
+  <div class="input-contain">
+    <input (dateChange)="onDateChange($event)" [disabled]="disabled" [matDatepicker]="picker" [ngModel]="value"
+           class="persianDatePicker-input" matInput readonly="true" type="text">
+    <label class="placeholder-text">
+      <div class="text">{{title! | translate}}
+        <span style="color: red">{{required ? '*' : ''}}</span>
+      </div>
+    </label>
+  </div>
+  <div class="persianDatePicker-icon">
+    <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </div>
+</div>

@@ -4,22 +4,21 @@ import {CommonModule} from '@angular/common';
 import {DashboardRoutingModule} from './dashboard-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomeComponent} from './home/home.component';
-import {AppSamaNavbarComponent} from "../../sama-common/app-sama-navbar/app-sama-navbar.component";
 import {MatIconModule} from "@angular/material/icon";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from "@angular/material/sidenav";
-import {AppSamaSideNavComponent} from "../../sama-common/app-sama-side-nav/app-sama-side-nav.component";
 import {UsersComponent} from './users/users.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     HomeComponent,
-    AppSamaNavbarComponent,
-    AppSamaSideNavComponent,
     UsersComponent
   ],
   imports: [
@@ -29,7 +28,10 @@ import {MatCardModule} from "@angular/material/card";
     MatMenuModule,
     MatButtonModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatExpansionModule,
+    MatToolbarModule
   ]
 })
 export class DashboardModule { }
