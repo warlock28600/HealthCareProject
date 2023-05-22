@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color: #007bff" color="primary">
   <button (click)="drawer.toggle()"
           mat-icon-button matTooltip="Menu">
     <mat-icon style="color: white">menu</mat-icon>
@@ -19,68 +19,66 @@
   <mat-sidenav #drawer [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [class.mat-elevation-z4]="true"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(isHandset$ | async) === false" class="sidenav col-md-2" mode="side" opened="true">
+               [opened]="(isHandset$ | async) === false" class="sidenav" mode="side" opened="true" style="background-color: #67aae4">
     <mat-nav-list>
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel style="background-color: #67aae4" [class.mat-elevation-z0]="true">
         <mat-expansion-panel-header>
-          <mat-icon>dashboard</mat-icon>
-          <span>اطلاعات پایه</span>
+<!--          <mat-icon>dashboard</mat-icon>-->
+          <span>امنیت سیستم</span>
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.INDEXER_TYPE_COMPONENT]" mat-list-item-->
-          <!--             routerLink="#">-->
-          <!--            <mat-icon>apple</mat-icon>-->
-          <!--            <span>انواع ایندکس نشریات</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.ACTIVITY_TYPE_COMPONENT]" mat-list-item-->
-          <!--             routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع فعالیت ها</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.JOURNAL_TYPE_COMPONENT]" mat-list-item-->
-          <!--             routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع نشریه</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.COST_TYPE_COMPONENT]" mat-list-item routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع هزینه</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.CONFERENCE_TYPE_COMPONENT]" mat-list-item-->
-          <!--             routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع همایش</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.SCIENTIFIC_GROUP_TYPE_COMPONENT]" mat-list-item-->
-          <!--             routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع گروه علمی نشریه</span>-->
-          <!--          </a>-->
+          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_GROUP_LIST]" mat-list-item
+             routerLink="#" class="d-flex justify-content-center align-items-center align-content-center">
+<!--            <mat-icon  >accessibility</mat-icon>-->
+            <span>لیست گروه های کاربری</span>
+          </a>
+          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_GROUP_ADD]" mat-list-item
+             routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>تعریف گروه کاربری جدید</span>
+          </a>
+          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_MANAGEMENT]" mat-list-item
+             routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>لیست کاربران</span>
+          </a>
         </mat-nav-list>
       </mat-expansion-panel>
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel style="background-color: #67aae4" [class.mat-elevation-z0]="true">
         <mat-expansion-panel-header>
-          اطلاعات جزئیات
+          مدیریت سیستم
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <!--          <a [routerLink]="[Route.ACTIVITY_PROPERTY_TYPE_COMPONENT]" mat-list-item routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>انواع جزئیات فعالیت ها</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLink]="[Route.ACTIVITY_PROPERTY_COMPONENT]" mat-list-item routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>جزئیات فعالیت ها</span>-->
-          <!--          </a>-->
-          <!--          <a [routerLink]="[Route.ACTIVITY_PROPERTY_ITEM_COMPONENT]" mat-list-item routerLink="#">-->
-          <!--            <mat-icon>android</mat-icon>-->
-          <!--            <span>معرفی جزئیات فعالیت ها</span>-->
-          <!--          </a>-->
+          <a [routerLink]="[Route.USER_CHANGE_PASSWORD]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>تغییر رمز</span>
+          </a>
+          <a [routerLink]="[Route.BASE_INFORMATION_INSERT]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>تغذیه اطلاعات</span>
+          </a>
+          <a [routerLink]="[Route.ACCESS_AND_UPDATE_INFORMATION]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>مدیریت دسترسی و ویرایش</span>
+          </a>
+          <a [routerLink]="[Route.UPDATE_LOGIN_SCREEN_NOTIFICATION]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>ویرایش محتوای صفحه ورود به سیستم</span>
+          </a>
+          <a [routerLink]="[Route.UPDATE_MAIN_SCREEN_NOTIFICATION]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>ویرایش محتوای صفحه اصلی</span>
+          </a>
+          <a [routerLink]="[Route.LEO_LINK_MANAGEMENT]" mat-list-item routerLink="#">
+<!--            <mat-icon>android</mat-icon>-->
+            <span>مدیریت لوئینک ها</span>
+          </a>
         </mat-nav-list>
       </mat-expansion-panel>
 
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel style="background-color: #67aae4" [class.mat-elevation-z0]="true">
         <mat-expansion-panel-header>
-          بررسی فعالیت ها
+          دانشجو
         </mat-expansion-panel-header>
         <mat-nav-list>
           <!--          <a [routerLink]="[Route.ACTIVITY_STATUS_COMPONENT]" mat-list-item routerLink="#">-->
@@ -102,9 +100,9 @@
         </mat-nav-list>
       </mat-expansion-panel>
 
-      <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel style="background-color: #67aae4" [class.mat-elevation-z0]="true">
         <mat-expansion-panel-header>
-          پژوهشی
+          پزشک
         </mat-expansion-panel-header>
         <mat-nav-list>
           <!--          <a [routerLink]="[Route.ACTIVITY_COMPONENT]" mat-list-item routerLink="#">-->
