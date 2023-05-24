@@ -5,6 +5,7 @@ import {SamaCheckBoxComponent} from './sama-check-box/sama-check-box.component';
 import {SamaDateComponent} from './sama-date/sama-date.component';
 import {SamaDropdownComponent} from './sama-dropdown/sama-dropdown.component';
 import {MatIconModule} from "@angular/material/icon";
+import {SamaTableComponent} from './sama-table/sama-table.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {MatIconModule} from "@angular/material/icon";
     SamaButtonComponent,
     SamaCheckBoxComponent,
     SamaDateComponent,
-    SamaDropdownComponent
+    SamaDropdownComponent,
+    SamaTableComponent
   ],
   imports: [
     CommonModule,

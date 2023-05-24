@@ -10,17 +10,31 @@ import {MatSidenav} from "@angular/material/sidenav";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent extends BaseComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+/
+home / farhang / WebstormProjects / SamaOld;
+extends
+BaseComponent;
+implements;
+OnInit, AfterViewInit, AfterContentInit;
+{
+
+  Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
-  @ViewChild('sidenav') sidenav?: MatSidenav;
+@ViewChild('sidenav')
+  sidenav ? : MatSidenav;
 
-  constructor(private breakpointObserver: BreakpointObserver, injector: Injector) {
+  constructor(private
+  BreakpointObserver, injector;
+:
+  Injector;
+)
+  {
     super(injector);
   }
 
