@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
 
 html, body {
   height: 100%;
@@ -6,7 +7,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-container {
@@ -24,3 +25,67 @@ body {
 .text-dark {
   color: #595958;
 }
+
+.panel-heading {
+  background-color: #1296E2;
+}
+
+.panel-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: bold
+
+}
+
+.nav-color {
+  background-color: #094B71;
+}
+
+.lable-text {
+  color: #1e2125;
+  display: flex;
+  font-weight: 550;
+  font-size: small;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3px;
+}
+
+.input-text {
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.input-container {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sama-table-container {
+  z-index: 2;
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px;
+  padding: 10px;
+}
+
+.sama-table-header {
+
+  height: 60px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-button {
+  background-color: #2346D1;
+  color: white;
+  border-radius: 3px;
+  padding: 5px;
+  text-decoration: none;
+  z-index: 5;
+}
+
+

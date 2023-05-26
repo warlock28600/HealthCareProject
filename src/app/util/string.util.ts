@@ -1,16 +1,16 @@
-import jwtDecode from "jwt-decode";
-import {TranslateService} from "@ngx-translate/core";
+// import jwtDecode from "jwt-decode";
+
 import * as moment from "jalali-moment";
 
 export class StringUtil {
 
-  public static getString(translateService: TranslateService, key: string) {
-    let result = {value: ''};
-    translateService.get('' + key).subscribe((value) => {
-      return result.value = value;
-    });
-    return result;
-  }
+  // public static getString(translateService: TranslateService, key: string) {
+  //   let result = {value: ''};
+  //   translateService.get('' + key).subscribe((value) => {
+  //     return result.value = value;
+  //   });
+  //   return result;
+  // }
 
   public static getTermLessonScheduleAsString(TermLessonSchedule: any): string {
     let temp = '';
@@ -81,12 +81,12 @@ export class StringUtil {
     return email.match(regexp) != null;
   }
 
-  public static decodedToken(token: string): any | null {
-    if (token.split('.').length === 3) {
-      return jwtDecode(token);
-    }
-    return null;
-  }
+  // public static decodedToken(token: string): any | null {
+  //   if (token.split('.').length === 3) {
+  //     return jwtDecode(token);
+  //   }
+  //   return null;
+  // }
 
   public static integerAsCurrency(integer?: number): string {
     if (!integer && integer !== 0) {

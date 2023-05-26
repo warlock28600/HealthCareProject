@@ -3,7 +3,7 @@
     <input (dateChange)="onDateChange($event)" [disabled]="disabled" [matDatepicker]="picker" [ngModel]="value"
            class="persianDatePicker-input" matInput readonly="true" type="text">
     <label class="placeholder-text">
-      <div class="text">{{title! | translate}}
+      <div class="text">{{title}}
         <span style="color: red">{{required ? '*' : ''}}</span>
       </div>
     </label>

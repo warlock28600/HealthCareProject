@@ -5,15 +5,15 @@
                   matColumnDef="{{header}}">
       <ng-container *ngIf="['event', 'icon', 'row_number'].includes(displayColumnTypes[i]) else otherwise">
         <th *matHeaderCellDef mat-header-cell>
-          {{header | translate}}
+          {{header}}
         </th>
       </ng-container>
       <ng-template #otherwise>
         <th *matHeaderCellDef mat-header-cell mat-sort-header>
-          {{header | translate}}
+          {{header}}
         </th>
       </ng-template>
-      <td *matCellDef="let element; let j = index;" [attr.content]="header | translate" mat-cell>
+      <td *matCellDef="let element; let j = index;" [attr.content]="header" mat-cell>
         <div class="table-data-content">
           <ng-container *ngIf="['event', 'icon'].includes(displayColumnTypes[i]) else otherwise">
             <ng-container *ngIf="displayColumnTypes[i] === 'event'">
@@ -30,10 +30,10 @@
           </ng-container>
           <ng-template #otherwise>
             <ng-container *ngIf="displayColumnTypes[i] === 'string' || displayColumnTypes[i] === 'boolean'">
-              {{getValue(i, j, element, displayDataSources[i]) | samatranslate}}
+              {{getValue(i, j, element, displayDataSources[i])}}
             </ng-container>
             <ng-container *ngIf="displayColumnTypes[i].startsWith('date')">
-              {{getValue(i, j, element, displayDataSources[i]) | time: displayColumnTypes[i].split('date:')[1]}}
+              <!--              {{getValue(i, j, element, displayDataSources[i]) | time: displayColumnTypes[i].split('date:')[1]}}-->
             </ng-container>
             <ng-container
               *ngIf="displayColumnTypes[i] === 'number' || displayColumnTypes[i] === 'row_number' || displayColumnTypes[i] === 'percent'">

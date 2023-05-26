@@ -1,1 +1,55 @@
-<p>user-management works!</p>
+<div class="container-fluid px-0 mx-0">
+  <div class="panel-heading">
+    <label class="panel-title">مدیریت کاربری</label>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row input-container">
+        <div class="col-md-3">
+          <label class="lable-text">نام کاربری :</label>
+        </div>
+        <div class="col-md-9 d-flex align-items-center align-content-center">
+          <input [(ngModel)]="userName" class="input-text" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row px-2 py-2">
+    <div class="sama-table-container">
+      <div class="sama-table-header row mx-1">
+        <mat-toolbar style="background-color: #146C94;height: 50px;border-radius:4px">
+          <button (click)="onAddUserClicked()" aria-label="Example icon-button with menu icon "
+                  class="example-icon d-flex justify-content-between py-2 mx-1 border border-1"
+                  mat-button
+                  style="border-color: #67aae4;background-color: #19A7CE ; padding-top: 20px">
+            افزودن
+            <mat-icon>add</mat-icon>
+          </button>
+          <button (click)="onUpdateUserClicked()" aria-label="Example icon-button with menu icon "
+                  class="example-icon d-flex justify-content-between py-2 mx-1 border border-1"
+                  mat-button
+                  style="border-color: #67aae4;background-color: #19A7CE ; padding-top: 20px">
+            ویرایش
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button (click)="onDeleteUserClicked()" aria-label="Example icon-button with menu icon "
+                  class="example-icon d-flex justify-content-between py-2 mx-1 border border-1"
+                  mat-button
+                  style="border-color: #67aae4;background-color: #19A7CE ; padding-top: 20px">
+            حذف
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-toolbar>
+      </div>
+      <app-sama-table (onRowSelected)="onUserSelected($event)"
+                      [dataSource]="userList"
+                      [displayColumnTypes]="userDisplayColumnType"
+                      [displayColumns]="userDisplayColumn"
+                      [displayDataSources]="userDisplayDataSource"
+                      [isSelectable]="true">
+      </app-sama-table>
+
+    </div>
+
+  </div>
+</div>

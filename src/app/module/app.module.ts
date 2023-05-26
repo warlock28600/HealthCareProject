@@ -12,6 +12,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatSidenavModule,
     MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
 
   ],
   providers: [

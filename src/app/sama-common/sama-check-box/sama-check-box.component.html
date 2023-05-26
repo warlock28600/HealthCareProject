@@ -1,4 +1,4 @@
 <div class="d-flex align-items-center">
   <input (click)="onLabelClicked()" [(ngModel)]="value" [disabled]="disabled" type="checkbox">
-  <label (click)="onLabelClicked()" class="ms-2">{{required ? '*' : ''}}{{title! | translate}}</label>
+  <label (click)="onLabelClicked()" class="ms-2">{{required ? '*' : ''}}{{title}}</label>
 </div>

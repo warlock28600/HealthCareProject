@@ -1,9 +1,9 @@
-<mat-toolbar style="background-color: #007bff" color="primary">
+<mat-toolbar style="background-color: #094B71">
   <button (click)="drawer.toggle()"
           mat-icon-button matTooltip="Menu">
     <mat-icon style="color: white">menu</mat-icon>
   </button>
-  <span>پژوهشی</span>
+  <span>سیستم پایش سلامت دانشجو</span>
   <span class="toolbar-item-spacer"></span>
   <button [matMenuTriggerFor]="userAccountMenu" mat-icon-button matTooltip="My Account">
     <mat-icon style="color: white">account_circle</mat-icon>
@@ -30,17 +30,12 @@
           <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_GROUP_LIST]" mat-list-item
              routerLink="#" class="d-flex justify-content-center align-items-center align-content-center">
 <!--            <mat-icon  >accessibility</mat-icon>-->
-            <span>لیست گروه های کاربری</span>
-          </a>
-          <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_GROUP_ADD]" mat-list-item
-             routerLink="#">
-<!--            <mat-icon>android</mat-icon>-->
-            <span>تعریف گروه کاربری جدید</span>
+            <span>گروه های کاربری</span>
           </a>
           <a [routerLinkActive]="'activeItem'" [routerLink]="[Route.USER_MANAGEMENT]" mat-list-item
              routerLink="#">
 <!--            <mat-icon>android</mat-icon>-->
-            <span>لیست کاربران</span>
+            <span>مدیریت کاربری</span>
           </a>
         </mat-nav-list>
       </mat-expansion-panel>
@@ -121,7 +116,7 @@
       </mat-expansion-panel>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="bg-white">
     <app-dashboard></app-dashboard>
   </mat-sidenav-content>
 </mat-sidenav-container>
