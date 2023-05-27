@@ -1,0 +1,143 @@
+
+.input-contain {
+  position: relative;
+  margin-top: 2rem;
+
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px 15px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #148CFF;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+input[type="text"]:disabled + .placeholder-text .text {
+  background: linear-gradient(0deg, rgba(230, 230, 230, 1) 30%, rgba(255, 255, 255, 1) 50%);
+  cursor: not-allowed;
+}
+
+input[type="text"]:disabled {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
+
+input[type="number"]:disabled + .placeholder-text .text {
+  background: linear-gradient(0deg, rgba(230, 230, 230, 1) 30%, rgba(255, 255, 255, 1) 50%);
+  cursor: not-allowed;
+}
+
+input[type="number"]:disabled {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
+
+input[type="url"]:disabled {
+  cursor: pointer !important;
+}
+
+input[type="password"]:disabled {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+}
+
+input[type="time"]:disabled + .placeholder-text .text {
+  background: linear-gradient(0deg, rgba(230, 230, 230, 1) 30%, rgba(255, 255, 255, 1) 50%);
+  cursor: not-allowed;
+}
+
+input[type="time"]:disabled + .placeholder-text .text {
+  background-color: #e6e6e6;
+  cursor: not-allowed;
+
+}
+
+input:focus {
+  outline: none;
+  border-color: #67aae4;
+}
+
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text {
+  background-color: white;
+  font-size: 11px;
+  color: black;
+  transform: translate(0, -105%);
+}
+
+input:focus + .placeholder-text .text {
+  border-color: #148CFF;
+  color: black;
+}
+
+.placeholder-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 3px solid transparent;
+  background-color: transparent;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-size: 12px;
+  padding: 0 0.5rem;
+  background-color: transparent;
+  transform: translate(0);
+  color: black;
+  transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+}
+
+input, .placeholder-text {
+  font-size: 13px;
+  padding: 8px 10px;
+}
+
+.form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  height: 80%;
+  top: 5px;
+  width: 30px;
+  text-align: center;
+  border: none;
+  color: #148CFF;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.form-control-password {
+  position: absolute;
+  z-index: 2;
+  height: 80%;
+  top: 5px;
+  width: 30px;
+  text-align: center;
+  border: none;
+  color: #148CFF;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}

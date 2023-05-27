@@ -1,3 +1,19 @@
-<div class="d-flex justify-content-center align-items-center">
-  <input>
+<div class="input-contain">
+  <input (change)="onChange()" [(ngModel)]="value" [disabled]="disabled"
+         [placeholder]="placeHolder"
+         [type]="type!" matInput title="{{value}}">
+  <!--  <ng-container *ngIf="lookup">-->
+  <!--    <mat-icon (click)="onLookupClicked()" class="form-control-feedback">search</mat-icon>-->
+  <!--  </ng-container>-->
+  <ng-container *ngIf="originalType === 'password'">
+    <mat-icon (mousedown)="type = 'text'" (mouseleave)="type = 'password'" (mouseup)="type = 'password'"
+              class="form-control-password">remove_red_eye
+    </mat-icon>
+  </ng-container>
+  <label class="placeholder-text">
+    <div class="text">
+      {{title! }}
+      <span style="color: red">{{required ? '*' : ''}}</span>
+    </div>
+  </label>
 </div>
