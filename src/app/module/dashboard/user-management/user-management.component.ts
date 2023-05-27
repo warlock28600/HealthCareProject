@@ -9,7 +9,7 @@ import {MatDialog} from "@angular/material/dialog";
   styleUrls: ['./user-management.component.scss']
 })
 export class UserManagementComponent {
-  userName?: any;
+  userName?: any = '';
   user?: any;
   userList: any = [];
   userDisplayColumn = ['نام و نام خانوادگی', 'نام کاربری', 'تاریخ ایجاد', 'تاریخ آحرین ورود', 'مسدود'];
