@@ -43,4 +43,17 @@ export class UserManagementComponent {
   onDeleteUserClicked() {
 
   }
+
+  // onCreateTermSchedulesClick() {
+  //   let addOrUpdateEducationTermSchedulesOptions = new AddOrUpdateEducationTermSchedulesOptions();
+  //   addOrUpdateEducationTermSchedulesOptions.termSchedule = {};
+  //   addOrUpdateEducationTermSchedulesOptions.onUpdateOrInsertFinished = () => {
+  //     this.loadOnline();
+  //   };
+  //   let addOrUpdateEducationTermSchedulesComponent = this.matDialog.open(AddOrUpdateEducationTermSchedulesComponent, {
+  //     height: 'auto',
+  //     width: '100%'
+  //   });
+  //   addOrUpdateEducationTermSchedulesComponent.componentInstance.addOrUpdateEducationTermSchedulesOptions = addOrUpdateEducationTermSchedulesOptions;
+  // }
 }
