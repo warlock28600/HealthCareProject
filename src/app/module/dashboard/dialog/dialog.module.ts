@@ -8,7 +8,8 @@ import {AddOrUpdateUserComponent} from './add-or-update-user/add-or-update-user.
     AddOrUpdateUserComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ]
 })
 export class DialogModule {

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {AddOrUpdateUserOptions} from "../dialog/add-or-update-user/options/add-or-update-user.options";
-import {AddOrUpdateUserComponent} from "../dialog/add-or-update-user/add-or-update-user.component";
 import {MatDialog} from "@angular/material/dialog";
+import {AddUserGroupOptions} from "../add-user-group/options/add-user-group.options";
+import {AddUserGroupComponent} from "../add-user-group/add-user-group.component";
 
 @Component({
   selector: 'app-user-management',
@@ -25,14 +25,15 @@ export class UserManagementComponent {
   }
 
   onAddUserClicked() {
-    let addOrUpdateUserOptions = new AddOrUpdateUserOptions()
-    addOrUpdateUserOptions.user = {}
-    addOrUpdateUserOptions.onUpdateOrInsertFinished = () => {
+    let addUserGroupOptions = new AddUserGroupOptions()
+    addUserGroupOptions.user = {}
+    addUserGroupOptions.onUpdateAndInsertFinished = () => {
 
     }
-    let addOrUpdateUserComponent = this.matdialog.open(AddOrUpdateUserComponent, {
+    let addUserGroupComponent = this.matdialog.open(AddUserGroupComponent, {
       height: 'auto',
       width: '100%',
+
     });
   }
 

@@ -30,6 +30,7 @@ import {
 import {LeolinkManagementComponent} from './leolink-management/leolink-management.component';
 import {FormsModule} from "@angular/forms";
 import {SamaCommonModule} from "../../sama-common/sama-common.module";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import {SamaCommonModule} from "../../sama-common/sama-common.module";
     MatToolbarModule,
     FormsModule,
     SamaCommonModule,
+    MatDialogModule,
 
   ]
 })

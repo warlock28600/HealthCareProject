@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AddUserGroupOptions} from "./options/add-user-group.options";
 
 @Component({
   selector: 'app-add-user-group',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-user-group.component.scss']
 })
 export class AddUserGroupComponent {
+  addUserGroupOptions = new AddUserGroupOptions()
 
+  constructor() {
+  }
+
+  onSubmitClicked() {
+
+  }
+
+  noAction() {
+
+  }
 }

@@ -20,10 +20,11 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     SamaTableComponent,
     SamaInputComponent
   ],
-    exports: [
-        SamaTableComponent,
-        SamaInputComponent
-    ],
+  exports: [
+    SamaTableComponent,
+    SamaInputComponent,
+    SamaButtonComponent
+  ],
   imports: [
     CommonModule,
     MatIconModule,
