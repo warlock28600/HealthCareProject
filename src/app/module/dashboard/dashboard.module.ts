@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-
 import {DashboardRoutingModule} from './dashboard-routing.module';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HomeComponent} from './home/home.component';
@@ -29,8 +28,8 @@ import {
 } from './update-main-page-notification/update-main-page-notification.component';
 import {LeolinkManagementComponent} from './leolink-management/leolink-management.component';
 import {FormsModule} from "@angular/forms";
-import {SamaCommonModule} from "../../sama-common/sama-common.module";
 import {MatDialogModule} from "@angular/material/dialog";
+import {SamaCommonModule} from "../sama-common/sama-common.module";
 
 
 @NgModule({
@@ -62,7 +61,6 @@ import {MatDialogModule} from "@angular/material/dialog";
     FormsModule,
     SamaCommonModule,
     MatDialogModule,
-
   ]
 })
 export class DashboardModule { }

@@ -1,0 +1,50 @@
+<div class="py-3">
+  <div [ngStyle]="{'background': disable ? '#e6e6e6' : 'none'}" class="dd-container">
+    <div (clickOutside)="onClickedOutside()" class="dd-control-container" tabindex="0">
+      <div (click)="toggle()" class="d-flex dd-display-item">
+        <div class="d-flex align-items-center">
+          <mat-icon *ngIf="isListHide">keyboard_arrow_down</mat-icon>
+          <mat-icon *ngIf="!isListHide">keyboard_arrow_up</mat-icon>
+        </div>
+        <div class="w-100">
+          <input [ngStyle]="{'background': disable ? '#e6e6e6' : 'none'}" class="w-100 p-0"
+                 placeholder="{{selectedOptions && selectedOptions.length > 0 ? (getSelectedLabels()) : ('انتخاب کنید')}}"
+                 readonly
+                 style="border: none; cursor: pointer"
+                 type="text">
+        </div>
+        <label class="placeholder-text">
+          <div
+            [ngStyle]="{'background': disable ? 'linear-gradient(0deg, rgba(230,230,230,1) 30%, rgba(255,255,255,1) 50%)' : 'white'}"
+            class="text">
+            {{title}}
+            <span style="color: red">{{required ? '*' : ''}}</span>
+          </div>
+        </label>
+      </div>
+      <ul *ngIf="disable === false" [hidden]="isListHide" class="dd-items-container">
+        <ul class="dd-items-selected-container">
+          <li *ngFor="let selectedItem of selectedOptions; let i = index" class="dd-item-selected">
+            <mat-icon (click)="onSelectedItemRemoveClicked(i)">close</mat-icon>
+            {{selectedItem ? (selectedItem.Custom) : ''}}
+          </li>
+        </ul>
+        <ng-container *ngIf="isSearchable">
+          <div class="input-container d-flex justify-content-between">
+            <mat-icon (click)="onSearchIconClicked()" *ngIf="searchInput === ''">search</mat-icon>
+            <mat-icon (click)="onSearchIconClicked()" *ngIf="searchInput !== ''">close</mat-icon>
+            <input #search (keyup.enter)="onQuerySubmited($event)" [(ngModel)]="searchInput" autofocus
+                   class="drop-input"
+                   placeholder="جستجو" type="text">
+          </div>
+        </ng-container>
+        <ul class="dd-items">
+          <li (click)="onItemSelected(i)" *ngFor="let item of options; let i = index"
+              [ngClass]="hasSelected(item) ? 'selected' : 'un-selected'" class="dd-list-item">
+            {{item.Custom}}
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,36 @@
-<p>add-or-update-user works!</p>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button (click)="noAction()" aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+      <span
+        *ngIf="this.addOrUpdateUserOptions.user=== undefined">افزودن کاربر</span>
+      <span
+        *ngIf="this.addOrUpdateUserOptions.user!== undefined">ویرایش کاربر</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal-body" style="position: relative;">
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <app-sama-input [(value)]="firstNameAndLastName" [title]="'نام و نام خانوادگی'"></app-sama-input>
+      </div>
+      <div class="col-md-6">
+        <app-sama-select></app-sama-select>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="dialog-footer">
+  <mat-dialog-actions align="end">
+    <app-sama-button (click)="onSubmitClicked()" [title]="'Submit'"
+                     class="col-md-2">ذخیره
+    </app-sama-button>
+    <app-sama-button (click)="noAction()" [title]="'Cancel'"
+                     class="col-md-2">انصراف
+    </app-sama-button>
+  </mat-dialog-actions>
+</div>

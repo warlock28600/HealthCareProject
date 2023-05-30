@@ -35,6 +35,14 @@ export class StringUtil {
     return temp;
   }
 
+  // public static getString(translateService: TranslateService, key: string) {
+  //   let result = {value: ''};
+  //   translateService.get('' + key).subscribe((value) => {
+  //     return result.value = value;
+  //   });
+  //   return result;
+  // }
+
   public static getFormattedWeekNameByDayCode(DayCode: number): string {
     return 'شنبه';
   }

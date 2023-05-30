@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@types/lodash": "^4.14.194",
+    "angular2-hotkeys": "^13.4.0",
     "bootstrap": "^5.2.3",
     "jalali-moment": "^3.3.11",
     "jquery": "^3.7.0",

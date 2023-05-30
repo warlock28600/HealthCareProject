@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {StringUtil} from "../../util/string.util";
 import {MatDialog} from "@angular/material/dialog";
+import {StringUtil} from "../../../util/string.util";
 
 @Component({
   selector: 'app-sama-input',

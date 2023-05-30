@@ -1,11 +1,11 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-sama-check-box',
-  templateUrl: './sama-check-box.component.html',
-  styleUrls: ['./sama-check-box.component.scss']
+  selector: 'app-sama-checkbox',
+  templateUrl: './sama-checkbox.component.html',
+  styleUrls: ['./sama-checkbox.component.scss']
 })
-export class SamaCheckBoxComponent {
+export class SamaCheckboxComponent {
 
   @Input()
   value?: boolean;

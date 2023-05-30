@@ -13,8 +13,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -34,7 +35,22 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSnackBarModule,
 
+  ], exports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   providers: [
     {

@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {StringUtil} from "../../util/string.util";
+import {Component, EventEmitter, Injector, Input, Output} from "@angular/core";
 import {isArray, isEqual} from "lodash";
+import {StringUtil} from "../../../util/string.util";
 
 @Component({
   selector: 'app-sama-table',
@@ -11,6 +11,11 @@ export class SamaTableComponent {
 
   selectedRows: any[] = [];
   showFirstLastButtons = true;
+
+
+  constructor(injector: Injector) {
+
+  }
 
   @Input()
   tableProperties = {
